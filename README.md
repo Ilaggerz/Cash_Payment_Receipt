@@ -1,5 +1,5 @@
 # House Rental Recepit
-IT - 313 Final Project
+## IT - 313 Final Project
 
 
 ### Rental Reciept Payment
