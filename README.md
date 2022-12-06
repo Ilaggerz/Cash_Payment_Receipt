@@ -1,4 +1,4 @@
-# Cash_Payment_Receipt
+# House Rental Recepit
 IT - 313 Final Project
 
 
