@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 /* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+label {
+  cursor: pointer;
 }
 
 * {
@@ -21,7 +25,7 @@ ol[role="list"] {
 html,
 body {
   height: 100%;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Set core body defaults */
@@ -39,45 +43,304 @@ svg {
 }
 
 /* Styles */
-section {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-section .form {
-    width: 31.25em;
-    height: 35em;
-    background-color: #d2b3b3;
-    border-radius: 1.56rem;
-    box-shadow: 1px 5px 5px rgb(53, 38, 38);
-}
-section .form form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-block-start: 5px;
+
+:root {
+  --FIRST-COLOR-GRADIENT: #414141;
+  --SECOND-COLOR-GRADIENT: #000000;
+  --BG-GRADIENT: linear-Gradient(
+    to right,
+    var(--FIRST-COLOR-GRADIENT),
+    var(--SECOND-COLOR-GRADIENT)
+  );
+  --UL-BG-COLOR: #f5f5f5;
+  --TEXT--COLOR: #112a46;
 }
 
-.divider {
-    position: relative;
+/* INDEX STYLES */
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background: var(--BG-GRADIENT);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.divider::before,
-.divider::after {
-    content: "";
-    position: absolute;
-    width: 1050%;
-    height: 5px;
-    background-color: black;
+.wrapper ul span {
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
-.divider::before {
-    bottom: 9px;
-    left: -200px;
+.wrapper ul span i {
+  margin-right: 10px;
 }
 
-.divider::after {
-    bottom: 9px;
-    right: -200px;
+.wrapper ul {
+  list-style-type: none;
+  background-color: var(--UL-BG-COLOR);
+  border-radius: 15px;
+  padding: 1.5rem;
+}
+.wrapper ul li {
+  margin: 2rem 0;
+}
+
+.wrapper ul li a {
+  text-decoration: none;
+  color: var(--TEXT--COLOR);
+  font-weight: 700;
+  position: relative;
+  outline: none;
+  border: none;
+}
+
+.wrapper ul li a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--SECOND-COLOR-GRADIENT);
+  transition: width 0.5s ease-in-out;
+}
+.wrapper ul li a:hover::before,
+.wrapper ul li a:focus::before {
+  width: 100%;
+}
+
+/* CREATE PAGE STYLES */
+.create__container {
+  width: 100%;
+  height: 100%;
+  background: var(--BG-GRADIENT);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.create__Wrapper {
+  width: min(100%, 35em);
+
+  background-color: var(--UL-BG-COLOR);
+  margin: 1rem;
+  border-radius: 15px;
+}
+
+.create__Wrapper form {
+  width: 100%;
+}
+
+.create__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.create__header .create__form__header {
+  font-size: clamp(1rem, 1vw + 1rem, 1.75rem);
+}
+
+.create__header div {
+  position: relative;
+}
+
+.create__header div::after,
+.create__header div::before {
+  content: "";
+  position: absolute;
+  width: 15em;
+  height: 3px;
+  background-color: var(--SECOND-COLOR-GRADIENT);
+}
+.create__header div::before {
+  left: 2em;
+  bottom: 0.7em;
+}
+.create__header div::after {
+  right: 2em;
+  bottom: 0.7em;
+}
+
+.create__form__body {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.create__form__body div {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+input[id="tenantName"] {
+  padding: 10px;
+  padding-left: 15px;
+  border-radius: 25px;
+  outline: none;
+  border: 1px solid var(--SECOND-COLOR-GRADIENT);
+}
+
+label[for="tenantName"] {
+  position: absolute;
+  font-size: 15px;
+  background-color: var(--UL-BG-COLOR);
+  bottom: 6px;
+  left: 15px;
+  font-weight: 700;
+  transition: all 0.5s ease-in-out;
+}
+
+input[id="tenantName"]:focus ~ label[for="tenantName"],
+input[id="tenantName"]:valid ~ label[for="tenantName"] {
+  transform: translate(-5px, -18px) scale(0.75);
+}
+
+input[id="houseName"] {
+  padding: 10px;
+  padding-left: 15px;
+  border-radius: 25px;
+  outline: none;
+  border: 1px solid var(--SECOND-COLOR-GRADIENT);
+}
+
+label[for="houseName"] {
+  position: absolute;
+  font-size: 15px;
+  background-color: var(--UL-BG-COLOR);
+  bottom: 6px;
+  left: 15px;
+  font-weight: 700;
+  transition: all 0.5s ease-in-out;
+}
+
+input[id="houseName"]:focus ~ label[for="houseName"],
+input[id="houseName"]:valid ~ label[for="houseName"] {
+  transform: translate(-5px, -18px) scale(0.75);
+}
+
+input[id="amountPaid"] {
+  padding: 10px;
+  padding-left: 15px;
+  border-radius: 25px;
+  outline: none;
+  border: 1px solid var(--SECOND-COLOR-GRADIENT);
+}
+
+label[for="amountPaid"] {
+  position: absolute;
+  font-size: 15px;
+  background-color: var(--UL-BG-COLOR);
+  bottom: 6px;
+  left: 15px;
+  font-weight: 700;
+  transition: all 0.5s ease-in-out;
+}
+
+input[id="amountPaid"]:focus ~ label[for="amountPaid"],
+input[id="amountPaid"]:valid ~ label[for="amountPaid"] {
+  transform: translate(-5px, -18px) scale(0.75);
+}
+
+label[for="paymentDate"] {
+  font-size: 15px;
+  background-color: var(--UL-BG-COLOR);
+  font-weight: 700;
+  margin-right: 10px;
+}
+input[id="paymentDate"] {
+  padding: 10px;
+  border-radius: 25px;
+  outline: none;
+  border: 1px solid var(--SECOND-COLOR-GRADIENT);
+}
+
+textarea[id="notes"] {
+  padding: 10px;
+  padding-left: 15px;
+  padding-top: 30px;
+  border-radius: 25px;
+  outline: none;
+  border: 1px solid var(--SECOND-COLOR-GRADIENT);
+  resize: none;
+}
+
+label[for="notes"] {
+  position: absolute;
+  font-size: 15px;
+  background-color: var(--UL-BG-COLOR);
+  bottom: 170px;
+  left: 15px;
+  font-weight: 700;
+  transition: all 0.5s ease-in-out;
+}
+
+textarea[id="notes"]:focus ~ label[for="notes"] {
+  transform: translate(-5px, -18px) scale(0.75);
+}
+
+.create__form__body div:last-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 1rem;
+  text-align: center;
+}
+.create__form__body div button {
+  padding: 10px 20px;
+  border-radius: 15px;
+  outline: none;
+  border: 1px solid var(--SECOND-COLOR-GRADIENT);
+  cursor: pointer;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background-color: transparent;
+  transition: all 1s ease-in-out -0.5s;
+}
+.create__form__body div button::before {
+  content: "";
+  position: absolute;
+  height: 360%;
+  width: 0%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotateZ(65deg);
+  background-color: var(--SECOND-COLOR-GRADIENT);
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.create__form__body div button:focus::before {
+  width: 105%;
+}
+
+.create__form__body div button:focus {
+  color: #f5f5f5;
+}
+
+.goBackLink {
+  text-decoration: none;
+  color: var(--TEXT--COLOR);
+  font-weight: 700;
+  position: relative;
+  outline: none;
+  border: none;
+}
+
+.goBackLink::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: 2px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--SECOND-COLOR-GRADIENT);
+  transition: width 0.5s ease-in-out;
+}
+.goBackLink:hover::before,
+.goBackLink:focus::before {
+  width: 100%;
 }
