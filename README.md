@@ -1,4 +1,3 @@
-
 # House Rental Receipt
 
 ## Tools required for this project
