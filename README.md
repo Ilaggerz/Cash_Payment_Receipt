@@ -15,4 +15,4 @@
 * Converted html files to php for PHP language functionality
 * Updated html tags with 'name' attributes for Backend usage 
 * Added php all_func.php        - see file for more info
->>>>>>> 66703fd (Updated Readme.md)
+
