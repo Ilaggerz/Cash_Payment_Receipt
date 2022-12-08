@@ -1,8 +1,8 @@
 
 ## Tools required for this project
 1. XAMPP
-    * Apache - for php usage
-    * Mysql
+    * Apache - PHP usage
+    * Mysql - Databse usage
 2. VsCode
     * github extensions
 
