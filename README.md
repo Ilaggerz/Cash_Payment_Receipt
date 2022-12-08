@@ -15,3 +15,10 @@
 * Updated html tags with 'name' attributes for Backend usage 
 * Added php all_func.php        - see file for more info
 
+12/08/2022 - John Coral
+* Responsive Design
+* Change some design
+* change houseName to houseNumber
+
+* Notes: dont convert html to php for the time being i cant open the files in my local server if its in php.
+
