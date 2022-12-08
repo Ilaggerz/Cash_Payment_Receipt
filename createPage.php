@@ -15,7 +15,7 @@
   <body>
     <section class="create__container">
       <div class="create__Wrapper">
-        <form action="" method="Post">
+        <form action="" method="post">
           <div class="create__header">
             <h1 class="create__form__header">HOUSE RENTAL</h1>
           </div>
@@ -49,7 +49,7 @@
               <label for="paymentDate">PAYMENT DATE: </label>
               <input
                 type="date"
-                name="payment date"
+                name="payment_date"
                 id="paymentDate"
                 required
               />
@@ -81,6 +81,7 @@ include_once 'all_func.php';
 
 if(isset($_POST['Submit']))
 {
-  echo "Submit Button is Working";
+  // echo $_POST['tenant_name'],$_POST['house_Number'],$_POST['montlyRent'],$_POST['payment_date'],$_POST['notes'];
+  insert_data_create($_POST['tenant_name'],$_POST['house_Number'],$_POST['montlyRent'],$_POST['payment_date'],$_POST['notes'],);
 }
 ?>
