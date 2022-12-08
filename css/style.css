@@ -223,7 +223,7 @@ input[id="tenantName"]:valid ~ label[for="tenantName"] {
   transform: translate(-5px, -18px) scale(0.75);
 }
 
-input[id="houseName"] {
+input[id="houseNumber"] {
   padding: 10px;
   padding-left: 15px;
   border-radius: 6px;
@@ -231,7 +231,7 @@ input[id="houseName"] {
   border: 1px solid var(--SECOND-COLOR-GRADIENT);
 }
 
-label[for="houseName"] {
+label[for="houseNumber"] {
   position: absolute;
   font-size: 15px;
   background-color: var(--UL-BG-COLOR);
@@ -241,8 +241,8 @@ label[for="houseName"] {
   transition: all 0.5s ease-in-out;
 }
 
-input[id="houseName"]:focus ~ label[for="houseName"],
-input[id="houseName"]:valid ~ label[for="houseName"] {
+input[id="houseNumber"]:focus ~ label[for="houseNumber"],
+input[id="houseNumber"]:valid ~ label[for="houseNumber"] {
   transform: translate(-5px, -18px) scale(0.75);
 }
 
