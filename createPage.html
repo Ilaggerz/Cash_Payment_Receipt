@@ -18,7 +18,6 @@
         <form action="" method="Post">
           <div class="create__header">
             <h1 class="create__form__header">HOUSE RENTAL</h1>
-            <div><i class="fa-solid fa-house"></i></div>
           </div>
           <section class="create__form__body">
             <div>
@@ -29,7 +28,14 @@
               <input type="text" name="house_name" id="houseName" required />
               <label for="houseName">HOUSE NUMBER</label>
             </div>
-            <div><h3>Monthly Rent: 1500</h3></div>
+            <div>
+              <label for="monthlyRent"> MONTHLY RENT:</label>
+              <select name="montlyRent" id="monthlyRent">
+                <option value="1000">1000</option>
+                <option value="1200">1200</option>
+                <option value="1500">1500</option>
+              </select>
+            </div>
             <div>
               <input type="text" name="amount_paid" id="amountPaid" required />
               <label for="amountPaid">AMOUNT PAID</label>
@@ -45,14 +51,16 @@
             </div>
             <div>
               <textarea name="notes" id="notes" cols="30" rows="10"></textarea>
-              <label for="notes">AMOUNT PAID</label>
+              <label for="notes">NOTES</label>
             </div>
-            <div>
+            <div class="lastBtn">
               <a aria-label="Go Back Home" href="index.html" class="goBackLink"
-                >Go back home</a
-              >
-              <button type="submit" name="Submit">Submit</button>
-              <button type="reset">Reset</button>
+                ><i class="fa-solid fa-arrow-left"></i
+              ></a>
+              <div class="actionBtns">
+                <button type="submit" name="Submit">Create</button>
+                <button type="reset">Reset</button>
+              </div>
             </div>
           </section>
         </form>
