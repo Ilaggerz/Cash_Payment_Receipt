@@ -1,4 +1,3 @@
-# House Rental Receipt
 
 ## Tools required for this project
 1. XAMPP
@@ -6,6 +5,10 @@
     * Mysql
 2. VsCode
     * github extensions
+
+## Important Notes:
+1. Dont convert html to php for the time being i cant open the files in my local server if its in php. -C
+2. I created a 2nd branch for my php files but my front end guy will still handle the design. -V
 
 ### Updates here:
 
@@ -20,5 +23,4 @@
 * Change some design
 * change houseName to houseNumber
 
-* Notes: dont convert html to php for the time being i cant open the files in my local server if its in php.
 
