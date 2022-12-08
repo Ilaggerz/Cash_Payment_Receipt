@@ -9,6 +9,7 @@
 ## Important Notes:
 1. Dont convert html to php for the time being i cant open the files in my local server if its in php. -C
 2. I created a 2nd branch for my php files but my front end guy will still handle the design. -V
+3. Pls. dont merge yet the 2 branches until final touches of this project are done. -V
 
 ### Updates here:
 
@@ -25,3 +26,4 @@
 
 12/09/2022
 * Added more functions to the all_func.php file
+* Created a master branch for my backend creation
