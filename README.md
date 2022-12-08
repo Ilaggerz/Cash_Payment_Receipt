@@ -22,7 +22,7 @@
 12/08/2022 - John Carlo
 * Responsive Design
 * Change some design
-* change houseName to houseNumber
+* change houseName to houseNumberasd
 
 12/09/2022
 * Added more functions to the all_func.php file
