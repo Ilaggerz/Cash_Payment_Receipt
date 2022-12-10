@@ -11,6 +11,7 @@
       src="https://kit.fontawesome.com/dc85338648.js"
       crossorigin="anonymous"
     ></script>
+    <script defer src="js/main.js"></script>
   </head>
   <body>
     <section class="create__container">
@@ -54,21 +55,43 @@
                 required
               />
             </div>
-            <div>
-              <textarea name="notes" id="notes" cols="30" rows="10"></textarea>
-              <label for="notes">NOTES</label>
-            </div>
             <div class="lastBtn">
               <a aria-label="Go Back Home" href="index.html" class="goBackLink"
                 ><i class="fa-solid fa-arrow-left"></i
               ></a>
               <div class="actionBtns">
-                <button type="submit" name="Submit">Create</button>
+                <button type="submit" name="Submit" id="create__btn">
+                  Create
+                </button>
                 <button type="reset">Reset</button>
               </div>
             </div>
           </section>
         </form>
+      </div>
+      <div class="receipt__container">
+        <div class="create__Receipt">
+          <header>
+            <h2>MONTHLY RENT</h2>
+            <aside>
+              <p id="receipt__no">Receipt No:</p>
+              <p id="receipt__date">Date:</p>
+            </aside>
+          </header>
+          <h4 id="receipt__tenantname">TENANT NAME:</h4>
+          <h4 id="receipt__housenumber">HOUSE NUMBER:</h4>
+          <h3>ACKNOWLEDGEMENT RECEIPT</h3>
+          <h3 id="receipt__monthlyrent">MONTHLY RENT:</h3>
+          <h3 id="receipt__previousbalance">PREVIOUS BALANCE:</h3>
+          <h3 id="receipt__amountpaid">AMOUNT PAID:</h3>
+          <h3 id="receipt__presentbalance">PRESENT BALANCE:</h3>
+          <footer>
+            <h4>TENANT SIGNATURE</h4>
+            <h4>LESSOR SIGNATURE</h4>
+          </footer>
+          <button id="goback__btn">Back</button>
+          <button id="printBtn">Print</button>
+        </div>
       </div>
     </section>
   </body>
