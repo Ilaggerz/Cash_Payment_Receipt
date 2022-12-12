@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>House Rental Reciept</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/dc85338648.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- CONTAINER -->
+    <div class="indexcontainer">
+      <!-- CONTAINER HEADER -->
+      <header class="indexcontainer__header">
+        <h1>HOUSE RENTAL</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">GENERATE RECEIPT</a></li>
+            <li><a href="renthistory.html">RENT HISTORY</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- CONTAINER MAIN -->
+      <main class="indexcontainer__main">
+        <!-- CONTAINER MAIN FORM -->
+        <form action="#">
+          <div>
+            <input type="text" name="tenant__name" id="tenant__name" required />
+            <label for="tenant__name">TENANT NAME</label>
+          </div>
+          <div>
+            <input
+              type="text"
+              name="house__number"
+              id="house__number"
+              required
+            />
+            <label for="house__number">HOUSE NUMBER</label>
+          </div>
+          <div>
+            <span>MOP:</span>
+            <div class="radio__btns">
+              <div>
+                <input
+                  type="radio"
+                  name="mode__of__payment"
+                  id="gcash"
+                  value="GCASH"
+                  required
+                />
+                <label for="gcash">GCASH</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="mode__of__payment"
+                  id="paypal"
+                  value="Paypal"
+                  required
+                />
+                <label for="paypal">PAYPAL</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="mode__of__payment"
+                  id="creditcard"
+                  value="Credit Card"
+                  required
+                />
+                <label for="creditcard">CREDIT CARD</label>
+              </div>
+            </div>
+          </div>
+          <div>
+            <input type="text" name="amount__paid" id="amount__paid" required />
+            <label for="amount__paid">AMOUNT PAID</label>
+          </div>
+          <div>
+            <label for="payment__date">PAYMENT DATE: </label>
+            <input
+              type="date"
+              name="payment__date"
+              id="payment__date"
+              required
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              name="generate__receipt__no"
+              id="generate__receipt__no"
+              placeholder="Generate Receipt No."
+              required
+            />
+            <button id="generate__rec__no">GENERATE</button>
+          </div>
+          <div class="form__btns">
+            <button id="submit">SUBMIT</button>
+            <button type="reset">RESET</button>
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
+
+<!-- No BACK-END HERE -->
