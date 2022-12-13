@@ -316,7 +316,7 @@ button[id="generate__rec__no"]:focus {
   border: 2px solid var(--INPUT--TEXT-COLOR);
 }
 
-@media only screen and (max-width: 470px) {
+@media only screen and (max-width: 479px) {
   input[id="tenant__name"],
   input[id="house__number"],
   input[id="amount__paid"],
@@ -333,6 +333,10 @@ button[id="generate__rec__no"]:focus {
     text-align: center;
   }
   .form__btns {
+    text-align: center;
+  }
+
+  .indexcontainer__header nav {
     text-align: center;
   }
 }
