@@ -19,7 +19,6 @@ const initApp = () => {
 
   generateRecNoBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    e.stopPropagation();
 
     inputGenerateRecNo.value = generateRandomNum();
   });

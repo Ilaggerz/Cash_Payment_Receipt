@@ -1,5 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
+/* UTILITY CLASSES */
+.INPUT-DESIGN {
+  outline: none;
+  border: 1px solid var(--HEADER--BG-COLOR);
+  border-radius: 5px 0 5px 0;
+  min-height: 2rem;
+  padding: 0.5em 0.75em;
+  font-size: 1rem;
+  color: var(--HEADER--BG-COLOR);
+  font-weight: 500;
+  background-color: var(--BG-COLOR);
+  transition: all 0.1s ease;
+}
+
 /* VARIABLES */
 :root {
   --BG-COLOR: #a6f7be;
@@ -70,6 +84,9 @@ input[type="radio"] {
   width: 100%;
   min-height: 100%;
 }
+.indexcontainer form h2 {
+  margin-bottom: 1em;
+}
 
 /* CONTAINER HEADER */
 .indexcontainer__header {
@@ -124,29 +141,28 @@ input[type="radio"] {
 /* CONTAINER MAIN */
 .indexcontainer__main {
   width: 100%;
-  padding: 2% 13%;
+  padding: 2% 8%;
 }
 
+/* CUSTOMER INFO */
 .indexcontainer__main form {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
 }
 
 .indexcontainer__main form div {
+  column-gap: 30px;
+}
+
+.indexcontainer__main form .First__Form div {
   position: relative;
   margin-bottom: 1.5em;
 }
 
-input[id="tenant__name"] {
-  outline: none;
-  border: 1px solid var(--HEADER--BG-COLOR);
-  border-radius: 5px 0 5px 0;
-  min-height: 2rem;
-  padding: 0.5em 0.75em;
-  font-size: 1rem;
-  color: var(--HEADER--BG-COLOR);
-  font-weight: 500;
-  background-color: var(--BG-COLOR);
-  transition: all 0.1s ease;
+.indexcontainer__main form .Second__Form div {
+  position: relative;
+  margin-bottom: 1.5em;
 }
 
 label[for="tenant__name"] {
@@ -157,31 +173,18 @@ label[for="tenant__name"] {
   transition: all 0.5s ease;
 }
 
-input[id="tenant__name"]:focus ~ label[for="tenant__name"],
-input[id="tenant__name"]:valid ~ label[for="tenant__name"] {
+.INPUT-DESIGN:focus ~ label[for="tenant__name"],
+.INPUT-DESIGN:valid ~ label[for="tenant__name"] {
   transform: translate(-15px, -16px) scale(0.7);
   color: var(--INPUT--TEXT-COLOR);
   font-weight: 700;
 }
 
-input[id="tenant__name"]:focus {
+.INPUT-DESIGN:focus {
   border: 2px solid var(--INPUT--TEXT-COLOR);
 }
 
-input[id="house__number"] {
-  outline: none;
-  border: 1px solid var(--HEADER--BG-COLOR);
-  border-radius: 5px 0 5px 0;
-  min-height: 2rem;
-  padding: 0.5em 0.75em;
-  font-size: 1rem;
-  color: var(--HEADER--BG-COLOR);
-  font-weight: 500;
-  background-color: var(--BG-COLOR);
-  transition: all 0.1s ease;
-}
-
-label[for="house__number"] {
+label[for="tenant__id"] {
   position: absolute;
   top: 5px;
   left: 10px;
@@ -189,108 +192,89 @@ label[for="house__number"] {
   transition: all 0.5s ease;
 }
 
-input[id="house__number"]:focus ~ label[for="house__number"],
-input[id="house__number"]:valid ~ label[for="house__number"] {
+.INPUT-DESIGN:focus ~ label[for="tenant__id"],
+.INPUT-DESIGN:valid ~ label[for="tenant__id"] {
   transform: translate(-15px, -16px) scale(0.7);
   color: var(--INPUT--TEXT-COLOR);
   font-weight: 700;
 }
 
-input[id="house__number"]:focus {
+.INPUT-DESIGN:focus {
   border: 2px solid var(--INPUT--TEXT-COLOR);
 }
-.indexcontainer__main form div:nth-child(3) {
+
+label[for="contact__number"] {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  background-color: var(--BG-COLOR);
+  transition: all 0.5s ease;
+}
+
+.INPUT-DESIGN:focus ~ label[for="contact__number"],
+.INPUT-DESIGN:valid ~ label[for="contact__number"] {
+  transform: translate(-15px, -16px) scale(0.7);
+  color: var(--INPUT--TEXT-COLOR);
+  font-weight: 700;
+}
+
+.INPUT-DESIGN:focus {
+  border: 2px solid var(--INPUT--TEXT-COLOR);
+}
+
+.indexcontainer__main form .First__Form div:nth-child(5) {
   display: flex;
   margin-bottom: 0;
 }
-.indexcontainer__main form div:nth-child(3) span {
+.indexcontainer__main form .First__Form div:nth-child(5) span {
   font-weight: 700;
   font-size: 1.2rem;
   margin-right: 30px;
 }
 
-.indexcontainer__main form div:nth-child(3) .radio__btns {
+.indexcontainer__main form .First__Form div:nth-child(5) .radio__btns {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
 
-.indexcontainer__main form div:nth-child(3) .radio__btns div {
+.indexcontainer__main form .First__Form div:nth-child(5) .radio__btns div {
   margin-bottom: 10px;
 }
 
-.indexcontainer__main form div:nth-child(3) .radio__btns div input {
+.indexcontainer__main
+  form
+  .First__Form
+  div:nth-child(4)
+  .radio__btns
+  div
+  input {
   margin-right: 10px;
 }
-input[id="amount__paid"] {
-  outline: none;
-  border: 1px solid var(--HEADER--BG-COLOR);
-  border-radius: 5px 0 5px 0;
-  min-height: 2rem;
-  padding: 0.5em 0.75em;
-  font-size: 1rem;
-  color: var(--HEADER--BG-COLOR);
-  font-weight: 500;
-  background-color: var(--BG-COLOR);
-  transition: all 0.1s ease;
-}
 
-label[for="amount__paid"] {
-  position: absolute;
-  top: 5px;
-  left: 10px;
-  background-color: var(--BG-COLOR);
-  transition: all 0.5s ease;
-}
-
-input[id="amount__paid"]:focus ~ label[for="amount__paid"],
-input[id="amount__paid"]:valid ~ label[for="amount__paid"] {
-  transform: translate(-15px, -16px) scale(0.7);
-  color: var(--INPUT--TEXT-COLOR);
+label[for="months__to__stay"] {
   font-weight: 700;
-}
-
-input[id="amount__paid"]:focus {
-  border: 2px solid var(--INPUT--TEXT-COLOR);
-}
-
-label[for="payment__date"] {
-  font-weight: 700;
+  font-size: 1.2rem;
   margin-right: 10px;
-  cursor: pointer;
 }
-input[id="payment__date"] {
+
+input[id="months__to__stay"] {
   border-radius: 5px 0 5px 0;
   border: 1px solid var(--HEADER--BG-COLOR);
   cursor: pointer;
+  width: 100px;
+  height: 30px;
+  padding: 0 0.5em;
+  font-weight: 700;
 }
-input[id="payment__date"]:focus {
+
+input[id="months__to__stay"]:focus {
   outline: none;
   border: 1px solid var(--INPUT--TEXT-COLOR);
 }
 
-input[id="generate__receipt__no"] {
-  outline: none;
-  border: 1px solid var(--HEADER--BG-COLOR);
-  border-radius: 5px 0 5px 0;
-  min-height: 2rem;
-  padding: 0.5em 0.75em;
-  font-size: 1rem;
-  color: var(--HEADER--BG-COLOR);
-  font-weight: 500;
-  background-color: var(--BG-COLOR);
-  transition: all 0.1s ease;
-}
-
-input[id="generate__receipt__no"]:focus {
-  border: 2px solid var(--INPUT--TEXT-COLOR);
-}
-
-input[id="generate__receipt__no"]:read-only {
-  background-color: rgba(133, 60, 60, 0.3);
-}
-button[id="generate__rec__no"] {
-  margin-left: 10px;
+.form__btns button {
+  margin-right: 10px;
   font-size: clamp(0.5rem, 0.5vw + 0.3rem, 0.75rem);
   padding: 8px 20px;
   border: 1px solid var(--HEADER--BG-COLOR);
@@ -300,8 +284,23 @@ button[id="generate__rec__no"] {
   transition: all 0.1s ease;
 }
 
-button[id="generate__rec__no"]:hover,
-button[id="generate__rec__no"]:focus {
+/* RECEIPT INFO */
+label[for="house__number"] {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  background-color: var(--BG-COLOR);
+  transition: all 0.5s ease;
+}
+
+.INPUT-DESIGN:focus ~ label[for="house__number"],
+.INPUT-DESIGN:valid ~ label[for="house__number"] {
+  transform: translate(-15px, -16px) scale(0.7);
+  color: var(--INPUT--TEXT-COLOR);
+  font-weight: 700;
+}
+
+.INPUT-DESIGN:focus {
   border: 2px solid var(--INPUT--TEXT-COLOR);
 }
 
@@ -333,24 +332,19 @@ label[for="monthly__rent"] {
   margin-right: 10px;
 }
 
-input[id="monthly__rent"] {
-  outline: none;
-  border: 1px solid var(--HEADER--BG-COLOR);
-  border-radius: 5px 0 5px 0;
-  min-height: 2rem;
-  padding: 0.5em 0.75em;
-  font-size: 1rem;
-  color: var(--HEADER--BG-COLOR);
-  font-weight: 500;
-  background-color: var(--BG-COLOR);
-  transition: all 0.1s ease;
-}
 input[id="monthly__rent"]:read-only {
   background-color: rgba(133, 60, 60, 0.3);
 }
 
-.form__btns button {
-  margin-right: 10px;
+.INPUT-DESIGN:focus {
+  border: 2px solid var(--INPUT--TEXT-COLOR);
+}
+
+.INPUT-DESIGN:read-only {
+  background-color: rgba(133, 60, 60, 0.3);
+}
+button[id="generate__rec__no"] {
+  margin-left: 10px;
   font-size: clamp(0.5rem, 0.5vw + 0.3rem, 0.75rem);
   padding: 8px 20px;
   border: 1px solid var(--HEADER--BG-COLOR);
@@ -358,29 +352,80 @@ input[id="monthly__rent"]:read-only {
   font-weight: 700;
   border-radius: 5px 0 5px 0;
   transition: all 0.1s ease;
+  margin-top: 10px;
 }
+
+button[id="generate__rec__no"]:hover,
+button[id="generate__rec__no"]:focus {
+  border: 2px solid var(--INPUT--TEXT-COLOR);
+}
+
+label[for="address"] {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  background-color: var(--BG-COLOR);
+  transition: all 0.5s ease;
+}
+
+.INPUT-DESIGN:focus ~ label[for="address"],
+.INPUT-DESIGN:valid ~ label[for="address"] {
+  transform: translate(-15px, -16px) scale(0.7);
+  color: var(--INPUT--TEXT-COLOR);
+  font-weight: 700;
+}
+
+.INPUT-DESIGN:focus {
+  border: 2px solid var(--INPUT--TEXT-COLOR);
+}
+
+label[for="street"] {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  background-color: var(--BG-COLOR);
+  transition: all 0.5s ease;
+}
+
+.INPUT-DESIGN:focus ~ label[for="street"],
+.INPUT-DESIGN:valid ~ label[for="street"] {
+  transform: translate(-15px, -16px) scale(0.7);
+  color: var(--INPUT--TEXT-COLOR);
+  font-weight: 700;
+}
+
+.INPUT-DESIGN:focus {
+  border: 2px solid var(--INPUT--TEXT-COLOR);
+}
+
 .form__btns button:hover,
 .form__btns button:focus {
   border: 2px solid var(--INPUT--TEXT-COLOR);
 }
 
-@media only screen and (max-width: 479px) {
-  input[id="tenant__name"],
-  input[id="house__number"],
-  input[id="amount__paid"],
-  input[id="generate__receipt__no"],
-  input[id="monthly__rent"] {
+.form__btns {
+  align-self: flex-end;
+}
+
+@media only screen and (max-width: 917px) {
+  .indexcontainer__main form {
+    flex-direction: column;
+  }
+  .form__btns {
+    align-self: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .indexcontainer__main form {
+    flex-direction: column;
+  }
+  .INPUT-DESIGN {
     width: 100%;
   }
+}
 
-  button[id="generate__rec__no"] {
-    margin-left: 0;
-    margin-top: 30px;
-  }
-
-  .indexcontainer__main form div:nth-child(6) {
-    text-align: center;
-  }
+@media only screen and (max-width: 479px) {
   .form__btns {
     text-align: center;
   }
