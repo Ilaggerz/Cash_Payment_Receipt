@@ -79,6 +79,7 @@ input[type="radio"] {
 }
 
 /* Styles */
+/* INDEX */
 /* CONTAINER */
 .indexcontainer {
   width: 100%;
@@ -363,7 +364,7 @@ button[id="generate__rec__no"]:focus {
 label[for="address"] {
   position: absolute;
   top: 5px;
-  left: 10px;
+  left: 15px;
   background-color: var(--BG-COLOR);
   transition: all 0.5s ease;
 }
@@ -382,7 +383,7 @@ label[for="address"] {
 label[for="street"] {
   position: absolute;
   top: 5px;
-  left: 10px;
+  left: 15px;
   background-color: var(--BG-COLOR);
   transition: all 0.5s ease;
 }
@@ -407,6 +408,18 @@ label[for="street"] {
   align-self: flex-end;
 }
 
+/* FOOTER */
+.footer {
+  margin-top: 2em;
+  display: grid;
+  background-color: #3e473f;
+  height: 70px;
+  place-items: center;
+}
+
+/* RENT HISTORY */
+
+/* MEDIA QUERIES */
 @media only screen and (max-width: 917px) {
   .indexcontainer__main form {
     flex-direction: column;

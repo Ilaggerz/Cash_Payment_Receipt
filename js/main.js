@@ -10,8 +10,11 @@ const initApp = () => {
   const inputGenerateRecNo = document.querySelector("#generate__receipt__no");
   const selectHomeTypes = document.querySelector("#home__types");
   const monthlyRent = document.querySelector("#monthly__rent");
+  const getCurrentYear = document.getElementById("getCurrentYear");
   let randomNum;
 
+  const d = new Date();
+  getCurrentYear.innerHTML = d.getFullYear();
   const generateRandomNum = () => {
     randomNum = Math.floor(Math.random() * 99999) + 10000;
     return randomNum;
