@@ -19,110 +19,161 @@
       <!-- CONTAINER HEADER -->
       <header class="indexcontainer__header">
         <h1>HOUSE RENTAL</h1>
-        <nav>
-          <ul>
-            <li><a href="index.html">GENERATE RECEIPT</a></li>
-            <li><a href="renthistory.html">RENT HISTORY</a></li>
-          </ul>
-        </nav>
       </header>
       <!-- CONTAINER MAIN -->
       <main class="indexcontainer__main">
         <!-- CONTAINER MAIN FORM -->
+
         <form action="#">
-          <div>
-            <input type="text" name="tenant__name" id="tenant__name" required />
-            <label for="tenant__name">TENANT NAME</label>
-          </div>
-          <div>
-            <input
-              type="text"
-              name="house__number"
-              id="house__number"
-              required
-            />
-            <label for="house__number">HOUSE NUMBER</label>
-          </div>
-          <div>
-            <span>MOP:</span>
-            <div class="radio__btns">
-              <div>
-                <input
-                  type="radio"
-                  name="mode__of__payment"
-                  id="gcash"
-                  value="GCASH"
-                  required
-                />
-                <label for="gcash">GCASH</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  name="mode__of__payment"
-                  id="paypal"
-                  value="Paypal"
-                  required
-                />
-                <label for="paypal">PAYPAL</label>
-              </div>
-              <div>
-                <input
-                  type="radio"
-                  name="mode__of__payment"
-                  id="creditcard"
-                  value="Credit Card"
-                  required
-                />
-                <label for="creditcard">CREDIT CARD</label>
+          <!-- CUSTOMER INFO -->
+          <div class="First__Form">
+            <h2>CUSTOMER INFO</h2>
+            <div>
+              <input
+                class="INPUT-DESIGN"
+                type="text"
+                name="tenant__name"
+                id="tenant__name"
+                required
+              />
+              <label for="tenant__name">TENANT NAME</label>
+            </div>
+            <div>
+              <input
+                class="INPUT-DESIGN"
+                type="text"
+                name="tenant__id"
+                id="tenant__id"
+                required
+              />
+              <label for="tenant__id">TENANT ID</label>
+            </div>
+            <div>
+              <input
+                class="INPUT-DESIGN"
+                type="tel"
+                name="contact__number"
+                id="contact__number"
+                pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"
+                required
+              />
+              <label for="contact__number">CONTACT NUMBER</label>
+            </div>
+            <div>
+              <span>MOP:</span>
+              <div class="radio__btns">
+                <div>
+                  <input
+                    type="radio"
+                    name="mode__of__payment"
+                    id="gcash"
+                    value="GCASH"
+                    required
+                  />
+                  <label for="gcash">GCASH</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    name="mode__of__payment"
+                    id="paypal"
+                    value="Paypal"
+                    required
+                  />
+                  <label for="paypal">PAYPAL</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    name="mode__of__payment"
+                    id="creditcard"
+                    value="Credit Card"
+                    required
+                  />
+                  <label for="creditcard">CREDIT CARD</label>
+                </div>
               </div>
             </div>
+            <div>
+              <label for="months__to__stay">MONTHS TO STAY</label>
+              <input
+                type="number"
+                name="months__to__stay"
+                id="months__to__stay"
+                min="1"
+                max="12"
+                required
+              />
+            </div>
           </div>
-          <div>
-            <input type="text" name="amount__paid" id="amount__paid" required />
-            <label for="amount__paid">AMOUNT PAID</label>
-          </div>
-          <div>
-            <label for="payment__date">PAYMENT DATE: </label>
-            <input
-              type="date"
-              name="payment__date"
-              id="payment__date"
-              required
-            />
-          </div>
-          <div>
-            <input
-              type="text"
-              name="generate__receipt__no"
-              id="generate__receipt__no"
-              placeholder="Generate Receipt No."
-              required
-              readonly
-            />
-            <button id="generate__rec__no">GENERATE</button>
-          </div>
-          <div>
-            <label for="home__types">HOME TYPES</label>
-            <select name="home__types" id="home__types">
-              <option value="30000">Bungalow</option>
-              <option value="15000">Single-detached</option>
-              <option value="20000">Single-attached</option>
-              <option value="50000">Duplex</option>
-              <option value="80000">Townhouse</option>
-              <option value="60000">Quadroplex</option>
-              <option value="90000">Rowhouse</option>
-            </select>
-          </div>
-          <div>
-            <label for="monthly__rent">MONTHLY RENT:</label>
-            <input
-              type="text"
-              name="monthly__rent"
-              id="monthly__rent"
-              required
-              readonly
-            />
+          <!-- RECEIPT INFO -->
+          <div class="Second__Form">
+            <h2>HOUSE INFO</h2>
+            <div>
+              <input
+                class="INPUT-DESIGN"
+                type="text"
+                name="house__number"
+                id="house__number"
+                required
+              />
+              <label for="house__number">HOUSE NUMBER</label>
+            </div>
+            <div>
+              <label for="home__types">HOME TYPES</label>
+              <select name="home__types" id="home__types">
+                <option value="30000">Bungalow</option>
+                <option value="15000">Single-detached</option>
+                <option value="20000">Single-attached</option>
+                <option value="50000">Duplex</option>
+                <option value="80000">Townhouse</option>
+                <option value="60000">Quadroplex</option>
+                <option value="90000">Rowhouse</option>
+              </select>
+            </div>
+            <div>
+              <label for="monthly__rent">MONTHLY RENT:</label>
+              <input
+                class="INPUT-DESIGN"
+                type="text"
+                name="monthly__rent"
+                id="monthly__rent"
+                required
+                readonly
+              />
+            </div>
+            <div>
+              <input
+                class="INPUT-DESIGN"
+                type="text"
+                name="generate__receipt__no"
+                id="generate__receipt__no"
+                placeholder="Generate Receipt No."
+                required
+                readonly
+              />
+              <button id="generate__rec__no">GENERATE</button>
+            </div>
+            <div>
+              <input
+                class="INPUT-DESIGN"
+                type="text"
+                name="address"
+                id="address"
+                required
+              />
+              <label for="address">ADDRESS</label>
+            </div>
+            <div>
+              <input
+                class="INPUT-DESIGN"
+                type="text"
+                name="street"
+                id="street"
+                required
+              />
+              <label for="street">STREET</label>
+            </div>
           </div>
           <div class="form__btns">
             <button id="submit">SUBMIT</button>
@@ -130,6 +181,42 @@
           </div>
         </form>
       </main>
+
+      <div class="overlay">
+        <section id="receipt">
+          <div class="first__col">
+            <h2>Monthly Rent</h2>
+            <div class="first__col__split">
+              <p>Receipt No. <span id="receipt__no__get"></span></p>
+              <p>Date: <span id="date__get"></span></p>
+            </div>
+          </div>
+          <div class="second__col">
+            <p>Tenant Name: <span id="tenant__name__get"></span></p>
+            <p>House Number: <span id="house__number__get"></span></p>
+          </div>
+          <div class="third__col">
+            <h3>Acknowledgement Receipt</h3>
+            <p>Month's Stayed: <span id="months__stayed__get"></span></p>
+            <p>Monthly Rent: <span id="monthly__rent__get"></span></p>
+            <p>Current Balance: <span id="current_balance__get"></span></p>
+            <p>Total Amount: <span id="total__amount__get"></span></p>
+            <p>Amount Paid: <span id="amount__paid__get"></span></p>
+          </div>
+          <hr />
+          <div class="receipt__footer">
+            <button id="back_btn">BACK</button>
+            <button id="print__btn">PRINT</button>
+            <h3>THANK YOU FOR YOUR PATRONAGE</h3>
+          </div>
+        </section>
+      </div>
+      <footer class="footer">
+        <h4>
+          &copy; <span id="getCurrentYear"></span> IDK WHAT TO PUT HERE INC. All
+          Rights Reserved
+        </h4>
+      </footer>
     </div>
   </body>
 </html>
