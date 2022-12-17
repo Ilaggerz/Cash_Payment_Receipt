@@ -11,6 +11,10 @@ const initApp = () => {
   const selectHomeTypes = document.querySelector("#home__types");
   const monthlyRent = document.querySelector("#monthly__rent");
   const getCurrentYear = document.getElementById("getCurrentYear");
+  const overlay = document.querySelector(".overlay");
+  const submitBtn = document.querySelector("#submit");
+  const backBtn = document.querySelector("#back_btn");
+  const printBtn = document.querySelector("#print__btn");
   let randomNum;
 
   const d = new Date();
@@ -20,6 +24,26 @@ const initApp = () => {
     return randomNum;
   };
 
+  submitBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    if (overlay.classList.contains("isActive")) {
+      overlay.classList.remove("isActive");
+    } else {
+      overlay.classList.add("isActive");
+    }
+  });
+
+  backBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    if (overlay.classList.contains("isActive")) {
+      overlay.classList.remove("isActive");
+    } else {
+      overlay.classList.add("isActive");
+    }
+  });
+
   generateRecNoBtn.addEventListener("click", (e) => {
     e.preventDefault();
 
@@ -28,5 +52,9 @@ const initApp = () => {
 
   selectHomeTypes.addEventListener("change", () => {
     monthlyRent.value = selectHomeTypes.value;
+  });
+
+  printBtn.addEventListener("click", (e) => {
+    window.print();
   });
 };

@@ -19,12 +19,6 @@
       <!-- CONTAINER HEADER -->
       <header class="indexcontainer__header">
         <h1>HOUSE RENTAL</h1>
-        <nav>
-          <ul>
-            <li><a href="index.html">GENERATE RECEIPT</a></li>
-            <li><a href="renthistory.html">RENT HISTORY</a></li>
-          </ul>
-        </nav>
       </header>
       <!-- CONTAINER MAIN -->
       <main class="indexcontainer__main">
@@ -188,6 +182,35 @@
         </form>
       </main>
 
+      <div class="overlay">
+        <section id="receipt">
+          <div class="first__col">
+            <h2>Monthly Rent</h2>
+            <div class="first__col__split">
+              <p>Receipt No. <span id="receipt__no__get"></span></p>
+              <p>Date: <span id="date__get"></span></p>
+            </div>
+          </div>
+          <div class="second__col">
+            <p>Tenant Name: <span id="tenant__name__get"></span></p>
+            <p>House Number: <span id="house__number__get"></span></p>
+          </div>
+          <div class="third__col">
+            <h3>Acknowledgement Receipt</h3>
+            <p>Month's Stayed: <span id="months__stayed__get"></span></p>
+            <p>Monthly Rent: <span id="monthly__rent__get"></span></p>
+            <p>Current Balance: <span id="current_balance__get"></span></p>
+            <p>Total Amount: <span id="total__amount__get"></span></p>
+            <p>Amount Paid: <span id="amount__paid__get"></span></p>
+          </div>
+          <hr />
+          <div class="receipt__footer">
+            <button id="back_btn">BACK</button>
+            <button id="print__btn">PRINT</button>
+            <h3>THANK YOU FOR YOUR PATRONAGE</h3>
+          </div>
+        </section>
+      </div>
       <footer class="footer">
         <h4>
           &copy; <span id="getCurrentYear"></span> IDK WHAT TO PUT HERE INC. All
