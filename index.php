@@ -24,7 +24,7 @@
       <main class="indexcontainer__main">
         <!-- CONTAINER MAIN FORM -->
 
-        <form action="" method="POST">
+        <form action="#" method="POST">
           <!-- CUSTOMER INFO -->
           <div class="First__Form">
             <h2>CUSTOMER INFO</h2>
@@ -38,23 +38,13 @@
               />
               <label for="tenant__name">TENANT NAME</label>
             </div>
-            <!-- <div>
-              <input
-                class="INPUT-DESIGN"
-                type="text"
-                name="tenant__id"
-                id="tenant__id"
-                required
-              />
-              <label for="tenant__id">TENANT ID</label>
-            </div> -->
             <div>
               <input
                 class="INPUT-DESIGN"
                 type="tel"
                 name="contact__number"
                 id="contact__number"
-               
+                pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"
                 required
               />
               <label for="contact__number">CONTACT NUMBER</label>
@@ -107,28 +97,25 @@
             </div>
           </div>
           <!-- RECEIPT INFO -->
-          <div class="Second__Form">
+          <div class="Second__Form" >
             <h2>HOUSE INFO</h2>
-            <!-- <div>          I comment this kay random generate via backend
-              <input
-                class="INPUT-DESIGN"
-                type="text"
-                name="house__number"
-                id="house__number"
-                required
-              />
-              <label for="house__number">HOUSE NUMBER</label>
-            </div> -->
             <div>
               <label for="home__types">HOME TYPES</label>
               <select name="home__types" id="home__types">
-                <option value="30000">Bungalow</option>
-                <option value="15000">Single-detached</option>
-                <option value="20000">Single-attached</option>
-                <option value="50000">Duplex</option>
-                <option value="80000">Townhouse</option>
-                <option value="60000">Quadroplex</option>
-                <option value="90000">Rowhouse</option>
+                <option value="Bungalow">Bungalow</option>
+                <!-- 30000 -->
+                <option value="Single-detached">Single-detached</option>
+                <!-- 15000 -->
+                <option value="Single-attached">Single-attached</option>
+                <!-- 20000 -->
+                <option value="Duplex">Duplex</option>
+                <!-- 50000 -->
+                <option value="Townhouse">Townhouse</option>
+                <!-- 80000 -->
+                <option value="Quadroplex">Quadroplex</option>
+                <!-- 60000 -->
+                <option value="Rowhouse">Rowhouse</option>
+                <!-- 90000 -->
               </select>
             </div>
             <div>
@@ -174,10 +161,10 @@
               />
               <label for="street">STREET</label>
             </div>
-          </div>
-          <div class="form__btns">
-            <button type="submit" name="send" id="submit">SUBMIT</button>
-            <button type="reset">RESET</button>
+            <div class="form__btns">
+              <button type="submit" name="send" id="submit">SUBMIT</button>
+              <button type="reset">RESET</button>
+            </div>
           </div>
         </form>
       </main>
@@ -211,11 +198,9 @@
           </div>
         </section>
       </div>
-
-      <br> <br> <br>
       <footer class="footer">
         <h4>
-          &copy; <span id="getCurrentYear"></span> IDK WHAT TO PUT HERE INC. All
+          &copy; <span id="getCurrentYear"></span> GROUP 1 BSIT-3A; All
           Rights Reserved
         </h4>
       </footer>
@@ -241,7 +226,7 @@ if (isset($_POST['send']))
 $tb_id = generateRandomString(10);
 $mm = $_POST['months__to__stay'];
 $bal = rand(100_000, 1_000_000_000);
-$total_bal = $bal * $mm;
+$total_bal = $_POST['monthly__rent'] * $mm;
 $date = date('y-m-d');
 
 

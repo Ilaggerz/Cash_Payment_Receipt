@@ -12,9 +12,15 @@ const initApp = () => {
   const monthlyRent = document.querySelector("#monthly__rent");
   const getCurrentYear = document.getElementById("getCurrentYear");
   const overlay = document.querySelector(".overlay");
-  const submitBtn = document.querySelector("#submit");
   const backBtn = document.querySelector("#back_btn");
   const printBtn = document.querySelector("#print__btn");
+  const submitBtn = document.querySelector("#submit");
+  const tenantName = document.querySelector("#tenant__name");
+  const contactNumber = document.querySelector("#contact__number");
+  const MTS = document.querySelector("#months__to__stay");
+  const address = document.querySelector("#address");
+  const street = document.querySelector("#street");
+
   let randomNum;
 
   const d = new Date();
@@ -24,6 +30,24 @@ const initApp = () => {
     return randomNum;
   };
 
+  // submitBtn.addEventListener("click", (e) => {
+  //   if (
+  //     tenantName.value === "" ||
+  //     contactNumber.value === "" ||
+  //     MTS.value === "" ||
+  //     monthlyRent.value === "" ||
+  //     inputGenerateRecNo.value === "" ||
+  //     address.value === "" ||
+  //     street.value === ""
+  //   ) {
+  //     alert("Please dont leave any blank inputs");
+  //     e.preventDefault();
+  //     return;
+  //   } else {
+  //     e.preventDefault();
+  //     overlay.classList.add("isActive");
+  //   }
+  // });
 
   backBtn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -42,7 +66,21 @@ const initApp = () => {
   });
 
   selectHomeTypes.addEventListener("change", () => {
-    monthlyRent.value = selectHomeTypes.value;
+    if (selectHomeTypes.value.toLowerCase() === "bungalow") {
+      monthlyRent.value = 30000;
+    } else if (selectHomeTypes.value.toLowerCase() === "single-detached") {
+      monthlyRent.value = 15000;
+    } else if (selectHomeTypes.value.toLowerCase() === "single-attached") {
+      monthlyRent.value = 20000;
+    } else if (selectHomeTypes.value.toLowerCase() === "duplex") {
+      monthlyRent.value = 50000;
+    } else if (selectHomeTypes.value.toLowerCase() === "townhouse") {
+      monthlyRent.value = 80000;
+    } else if (selectHomeTypes.value.toLowerCase() === "quadroplex") {
+      monthlyRent.value = 60000;
+    } else if (selectHomeTypes.value.toLowerCase() === "rowhouse") {
+      monthlyRent.value = 90000;
+    }
   });
 
   printBtn.addEventListener("click", (e) => {
