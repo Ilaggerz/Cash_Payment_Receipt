@@ -37,22 +37,15 @@ function insert_data__house ($hs_id, $hs_type, $mm_rate, $add, $strt) //HOUSE
     $stmt2->execute([$hs_id, $hs_type, $mm_rate, $add, $strt]); 
 }
 
-function insert_data__receipt ($rec_id, $bal, $ttl_bal, $date) //RECEIPT
+function insert_data__receipt ($rec_id, $ten_ID,$hs_ID,$mm_charge,$bal, $ttl_bal, $date) //RECEIPT
+// under maintenance
 {
     $conn = getDatabaseConnection(); 
-    $stmt = $conn->prepare("INSERT INTO receipt_table (Receipt_ID, Balance, Amount_paid, Date) values (?, ?, ?, ?, ?)");
-    $stmt->execute([$rec_id, $bal, $ttl_bal, $date]); 
+    $stmt = $conn->prepare("INSERT INTO receipt_table values (?, ?, ?, ?, ?,?,?)");
+    $stmt->execute([$rec_id, $ten_ID,$hs_ID, $mm_charge,$bal, $ttl_bal, $date]); 
 }
 
-// NOT SURE IF IM GONNA USE THIS THO :/
-// function get_receipt($conn) //For receipt_page
-// {
-//     $conn = getDatabaseConnection(); 
-//     $stmt = $conn -> prepare("SELECT column_name(s)FROM table1 INNER JOIN table2 ON table1.column_name = table2.column_name;"); // Using inner join here for the receipt
-//     $stmt -> execute();
-//     $result = $stmt -> fetchAll(PDO::FETCH_ASSOC);
-//     return $result;
-// }
+
 
 function generateRandomString($length = 10) // GENERATE RAND STRING
 {
@@ -64,26 +57,4 @@ function generateRandomString($length = 10) // GENERATE RAND STRING
     }
     return $randomString;
 }
-
-
-// FINAL USAGE
-// include_once 'all_func.php';
-
-// $lgnth = 10;
-// $hs_id = generateRandomString($lgnth);
-
-// $bal = rand(1000000000, 1000000000000000);
-// $total_bal = $bal * $_POST['months__to__stay'];
-// $date = date('y-m-d');
-
-
-// if (isset($_POST['Submit']))
-// {
-// insert_data__renter($_POST['tenant__id'],$_POST['tenant__name'],$_POST['contact__number'],$_POST['mode__of__payment'],$_POST['months__to__stay']); // check
-
-// insert_data__house($hs_id,$_POST['home__types'],$_POST['mothly__rent'],$_POST['address'],$_POST['street']); // check
-
-// insert_data__receipt(['generate__receipt__no'], $bal, $total_bal, $date); // on process 
-// header('test.php');
-// }
 ?>

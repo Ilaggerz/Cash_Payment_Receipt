@@ -24,15 +24,6 @@ const initApp = () => {
     return randomNum;
   };
 
-  submitBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    if (overlay.classList.contains("isActive")) {
-      overlay.classList.remove("isActive");
-    } else {
-      overlay.classList.add("isActive");
-    }
-  });
 
   backBtn.addEventListener("click", (e) => {
     e.preventDefault();
