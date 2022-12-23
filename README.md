@@ -29,3 +29,6 @@
 * Created a master branch for my backend creation
 * createpage.php can now add data to the datbase YEEEYYY!!
 
+12/23/2022 -Ivan
+* Major changes and Improvenemts
+* Now officially working with functionality
