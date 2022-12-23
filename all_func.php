@@ -5,7 +5,7 @@
 function getDatabaseConnection()  //Get connection from php to database
 {
     $host = 'localhost';
-    $dbname = 'house_rent_receipt';
+    $dbname = 'house_rental_db';
     $user = 'root';
     $password ='';
     $dsn = "mysql:dbname=$dbname;host=$host"; 
@@ -23,27 +23,59 @@ function getDatabaseConnection()  //Get connection from php to database
     }
 }
 
-function insert_data_create ($tnt_name, $house_num, $mm_rate, $date, $note) // For createpage
+function insert_data__renter ($tnt_id, $tnt_name, $cntct, $MOD, $mm) // RENTER
 {
     $conn = getDatabaseConnection(); 
-    $stmt = $conn->prepare("INSERT INTO house_rent VALUES (?, ?, ?, ?, ?)");
-    $stmt->execute([$tnt_name, $house_num, $mm_rate, $date, $note]); 
+    $stmt = $conn->prepare("INSERT INTO renter_info VALUES (?, ?, ?, ?, ?)");
+    $stmt->execute([$tnt_id, $tnt_name, $cntct, $MOD, $mm]); 
 }
 
-function insert_data_pay ($rec_id, $hs_id, $payday, $bal, $amnt_pay) // For PayPage
+function insert_data__house ($hs_id, $hs_type, $mm_rate, $add, $strt) //HOUSE
 {
     $conn = getDatabaseConnection(); 
-    $stmt = $conn->prepare("INSERT INTO receipt_table (?, ?, ?, ?, ?)");
-    $stmt->execute([$rec_id, $hs_id, $payday, $bal, $amnt_pay]); 
+    $stmt2 = $conn->prepare("INSERT INTO house_info values(?, ?, ?, ?, ?)");
+    $stmt2->execute([$hs_id, $hs_type, $mm_rate, $add, $strt]); 
 }
 
-function get_receipt($conn) //For receipt_page
+function insert_data__receipt ($rec_id, $ten_ID,$hs_ID,$mm_charge,$bal, $ttl_bal, $date) //RECEIPT
+// under maintenance
 {
     $conn = getDatabaseConnection(); 
-    $stmt = $conn -> prepare("SELECT column_name(s)FROM table1 INNER JOIN table2 ON table1.column_name = table2.column_name;"); // Using inner join here for the receipt
-    $stmt -> execute();
-    $result = $stmt -> fetchAll(PDO::FETCH_ASSOC);
+    $stmt = $conn->prepare("INSERT INTO receipt_table values (?, ?, ?, ?, ?,?,?)");
+    $stmt->execute([$rec_id, $ten_ID,$hs_ID, $mm_charge,$bal, $ttl_bal, $date]);
+}
+
+
+
+function generateRandomString($length = 10) // GENERATE RAND STRING
+{
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
+
+function getData_receipt($id)  //Gets all data from specified table inside database TOOL
+{
+    $conn = getDatabaseConnection(); 
+    $stmt = $conn->prepare("SELECT * FROM receipt_table WHERE Receipt_ID = $id");
+    $stmt->execute();
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
     return $result;
-}
+} 
+
+function getData_tnnt_name($tenant_id)  //Gets all data from specified table inside database TOOL
+{
+    $conn = getDatabaseConnection(); 
+    $stmt = $conn->prepare("SELECT Tenant_Name, Month_to_stay FROM renter_info WHERE Tenant_ID = '$tenant_id'");
+    $stmt->execute();
+    $result = $stmt->fetch (PDO::FETCH_ASSOC);
+    return $result;
+} 
+
+
 
 ?>

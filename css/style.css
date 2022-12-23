@@ -193,23 +193,23 @@ label[for="contact__number"] {
   border: 2px solid var(--INPUT--TEXT-COLOR);
 }
 
-.indexcontainer__main form .First__Form div:nth-child(5) {
+.indexcontainer__main form .First__Form div:nth-child(4) {
   display: flex;
   margin-bottom: 0;
 }
-.indexcontainer__main form .First__Form div:nth-child(5) span {
+.indexcontainer__main form .First__Form div:nth-child(4) span {
   font-weight: 700;
   font-size: 1.2rem;
   margin-right: 30px;
 }
 
-.indexcontainer__main form .First__Form div:nth-child(5) .radio__btns {
+.indexcontainer__main form .First__Form div:nth-child(4) .radio__btns {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
 
-.indexcontainer__main form .First__Form div:nth-child(5) .radio__btns div {
+.indexcontainer__main form .First__Form div:nth-child(4) .radio__btns div {
   margin-bottom: 10px;
 }
 
@@ -395,7 +395,6 @@ label[for="street"] {
   position: absolute;
   left: 0;
   top: 0;
-  margin-left: -9000px;
 }
 #receipt {
   display: grid;
@@ -451,8 +450,9 @@ hr {
   background-color: #000;
 }
 
-.isActive {
-  margin-left: 0px;
+#receipt span {
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
 }
 /* MEDIA QUERIES */
 @media only screen and (max-width: 917px) {
@@ -486,21 +486,5 @@ hr {
 @media print {
   button {
     visibility: hidden;
-  }
-
-  .footer {
-    visibility: hidden;
-  }
-
-  .indexcontainer__header {
-    visibility: hidden;
-  }
-
-  .indexcontainer__main {
-    visibility: hidden;
-  }
-
-  .overlay {
-    top: 50%;
   }
 }
